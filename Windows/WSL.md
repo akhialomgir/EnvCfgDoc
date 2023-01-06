@@ -10,3 +10,20 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 wsl --set-version Ubuntu-20.04 2
 wsl -l -v
 ```
+
+## Jupyter
+
+install:
+
+```sh
+sudo pacman -S jupyterlab
+```
+
+config:
+
+```py
+import webbrowser
+webbrowser.register('chrome',None,webbrowser.GenericBrowser('/usr/bin/chrome'))
+c.NotebookApp.browser = 'chrome'
+c.ServerApp.use_redirect_file = False
+```

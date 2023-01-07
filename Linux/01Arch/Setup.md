@@ -26,6 +26,11 @@ Arch.exe config --default-user akhia
 If you install or update directly, you will get a certificate error, so you need to install archlinux-keyring first.
 
 ```sh
+# Changing software sources
+sudo vim /etc/pacman.d/mirrorlist
+    # TOP
+    Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
+
 pacman -Sy archlinux-keyring
 pacman -Syu
 

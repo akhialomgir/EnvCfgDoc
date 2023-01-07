@@ -31,8 +31,8 @@ sudo vim /etc/pacman.d/mirrorlist
     # TOP
     Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
 
-pacman -Sy archlinux-keyring
-pacman -Syu
+sudo pacman -Sy archlinux-keyring
+sudo pacman -Syu
 
 sudo pacman -S zsh git
 git config --global user.name akhialomgir
@@ -43,6 +43,8 @@ chsh -s /bin/zsh
 Put zsh-autosuggestions and Vundle from the repository, then pull vimrc and zshrc from the remote.
 
 ```sh
+cp ~/EnvCfgDoc/Linux/RCs/.zshrc ~
+cp ~/EnvCfgDoc/Linux/RCs/.vimrc ~
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
@@ -54,8 +56,10 @@ install:
 
 ```sh
 sudo pacman -S python3 python-pip
+# to use extensions
+sudo pacman -S nodejs npm
 pip -V
-sudo pacman -S jupyterlab
+pip install jupyterlab
 ```
 
 Setting up soft links:
@@ -79,4 +83,10 @@ import webbrowser
 webbrowser.register('firefox',None,webbrowser.GenericBrowser('/usr/bin/firefox'))
 c.NotebookApp.browser = 'firefox'
 c.ServerApp.use_redirect_file = False
+```
+
+extensions:
+```sh
+# install jupyterlab_onedarkpro
+jupyter lab build --dev-build=False --minimize=False
 ```

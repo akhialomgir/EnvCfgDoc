@@ -49,6 +49,17 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosugges
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
+## Git
+
+Generate the key and copy
+
+```sh
+sudo pacman -S openssh
+ssh-keygen -t rsa -C "akhialomgir362856@gmail.com"
+cat ~/.ssh/id_rsa.pub
+
+ssh -T git@gitee.com
+```
 
 ## Jupyter
 

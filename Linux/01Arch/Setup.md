@@ -53,6 +53,8 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 install:
 
 ```sh
+sudo pacman -S python3 python-pip
+pip -V
 sudo pacman -S jupyterlab
 ```
 
@@ -67,9 +69,14 @@ chrome https://github.com/
 
 config:
 
+```sh
+jupyter lab --generate-config
+```
+
 ```py
+# ~/.jupyter/jupyter_lab_config.py
 import webbrowser
-webbrowser.register('chrome',None,webbrowser.GenericBrowser('/usr/bin/chrome'))
-c.NotebookApp.browser = 'chrome'
+webbrowser.register('firefox',None,webbrowser.GenericBrowser('/usr/bin/firefox'))
+c.NotebookApp.browser = 'firefox'
 c.ServerApp.use_redirect_file = False
 ```

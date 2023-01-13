@@ -101,3 +101,18 @@ extensions:
 # install jupyterlab_onedarkpro
 jupyter lab build --dev-build=False --minimize=False
 ```
+
+When creating files:
+
+> Error Unexpected error while saving file: xxx.ipynb [Errno 13] Permission denied: '/home/akhia/Code/xxx/.ipynb_checkpoints/xxx-checkpoint.ipynb'
+
+When openning files:
+
+> File Load Error for Untitled.ipynb Unhandled error
+
+```sh
+ls -la
+sudo chown akhia .ipynb_checkpoints
+# apply the following command to the whole workspace 
+chown -R akhia:akhia *
+```

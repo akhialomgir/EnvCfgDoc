@@ -10,11 +10,11 @@ PROMPT="%{$fg[yellow]%}%n%{$reset_color%}: %{$fg[blue]%}%1~ %{$reset_color%}%# "
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # DISPLAY
+export HOST_IP=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}')
 #export DISPLAY=127.0.0.1:0.0
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+export DISPLAY="$HOST_IP:0.0"
 
 # socket
-export HOST_IP=$(cat /etc/resolv.conf|grep nameserver|awk '{print $2;exit;}')
 export https_proxy="http://$HOST_IP:7890"
 export http_proxy="http://$HOST_IP:7890"
 

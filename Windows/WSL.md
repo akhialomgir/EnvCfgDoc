@@ -8,7 +8,9 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
-Download the [core update for WSL2](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
+
+
+**Restart** and download the [core update for WSL2](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
 
 ```PowerShell
 wsl -l -v

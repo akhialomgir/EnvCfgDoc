@@ -4,6 +4,8 @@
 
 [ArchWSL Install](https://github.com/yuk7/ArchWSL/releases)
 
+Unzip it in the root directory of the C drive and run Arch.exe
+
 ## Initialization
 
 First set up the user

@@ -8,7 +8,7 @@ Unzip it in the root directory of the C drive and run Arch.exe
 
 Switch to WSL2
 
-```pwd
+```PowerShell
 wsl --set-version Arch 2
 ```
 

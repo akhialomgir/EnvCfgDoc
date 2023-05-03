@@ -5,7 +5,7 @@
 - Office(Disk)
 - Photoshop(Disk)
 - [Firefox](https://download-ssl.firefox.com.cn/releases-sha2/stub/official/zh-CN/Firefox-latest.exe)
-- [VScode](https://code.visualstudio.com/download)
+- [VScode](https://code.visualstudio.com/download) Sys Version
 - [Everything](https://www.voidtools.com/Everything-1.4.1.1005.x64-Setup.exe)
 - [Toolbar](https://github.com/stnkl/EverythingToolbar/releases/download/0.6.3/EverythingToolbar-0.6.3.msi)
 - [7zip](https://www.7-zip.org/a/7z1900-x64.exe)

@@ -53,6 +53,7 @@ chsh -s /bin/zsh
 Put zsh-autosuggestions and Vundle from the repository, then pull vimrc and zshrc from the remote.
 
 ```sh
+git clone https://github.com/akhialomgir/EnvCfgDoc.git
 cp ~/EnvCfgDoc/Linux/RCs/.zshrc ~
 cp ~/EnvCfgDoc/Linux/RCs/.vimrc ~
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions

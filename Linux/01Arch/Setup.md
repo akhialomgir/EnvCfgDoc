@@ -60,6 +60,12 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosugges
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
+Vim plugin install:
+
+```vim
+:PluginInstal
+```
+
 ## Git
 
 Generate the key and copy

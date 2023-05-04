@@ -63,7 +63,8 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 Vim plugin install:
 
 ```vim
-:PluginInstal
+:PluginInstall
+q
 ```
 
 ## Git

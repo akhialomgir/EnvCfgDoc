@@ -20,7 +20,10 @@
 13. 调整主题等设置内容
 14. 安装Office(T7)并使用MAS（T7）扩展证书
 15. 安装剩余软件
-16. 关闭公共防火墙以在WSL2中使用代理
+16. 关闭公共防火墙以在WSL2中使用代理，使用管理员权限PowerShell输入以下命令允许WSL2通过防火墙
+  ```PowerShell
+    New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEthernet (WSL)"  -Action Allow
+  ```
 
 ## Tips
 

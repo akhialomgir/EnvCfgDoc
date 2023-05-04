@@ -15,8 +15,8 @@ export HOST_IP=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}
 export DISPLAY="$HOST_IP:0.0"
 
 # socket
-export https_proxy="http://$HOST_IP:7890"
-export http_proxy="http://$HOST_IP:7890"
+#export https_proxy="http://$HOST_IP:7890"
+#export http_proxy="http://$HOST_IP:7890"
 
 # export
 export PATH=/home/akhia/.local/bin:$PATH

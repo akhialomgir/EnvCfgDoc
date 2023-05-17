@@ -51,3 +51,8 @@ export NVM_DIR="$HOME/.nvm"
 
 # Ruby export
 export PATH=/home/akhia/.local/share/gem/ruby/3.0.0/bin:$PATH
+
+# TexLive export
+export MANPATH=/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH
+export PATH=/usr/local/texlive/2023/bin/x86_64-linux:$PATH

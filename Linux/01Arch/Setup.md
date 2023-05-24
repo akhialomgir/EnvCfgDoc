@@ -53,6 +53,10 @@ chsh -s /bin/zsh
 Put zsh-autosuggestions and Vundle from the repository, then pull vimrc and zshrc from the remote.
 
 ```sh
+export HOST_IP=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}')
+export https_proxy="http://$HOST_IP:7890"
+export http_proxy="http://$HOST_IP:7890"
+
 git clone https://github.com/akhialomgir/EnvCfgDoc.git
 cp ~/EnvCfgDoc/Linux/RCs/.zshrc ~
 cp ~/EnvCfgDoc/Linux/RCs/.vimrc ~

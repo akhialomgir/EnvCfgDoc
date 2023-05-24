@@ -6,6 +6,13 @@
 
 Unzip it in the root directory of the C drive and run Arch.exe
 
+reinstall
+
+```PowerShell
+wsl --unregister Arch
+wslconfig /setdefault Arch
+```
+
 Switch to WSL2
 
 ```PowerShell

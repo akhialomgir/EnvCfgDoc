@@ -13,6 +13,12 @@ wsl --unregister Arch
 wslconfig /setdefault Arch
 ```
 
+enable proxy between Win and WSL
+
+```PowerShell
+New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEthernet (WSL)"  -Action Allow
+```
+
 Switch to WSL2
 
 ```PowerShell

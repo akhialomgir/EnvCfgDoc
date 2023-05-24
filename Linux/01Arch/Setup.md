@@ -44,7 +44,7 @@ sudo vim /etc/pacman.d/mirrorlist
 sudo pacman -Sy archlinux-keyring
 sudo pacman -Syu
 
-sudo pacman -S zsh git
+sudo pacman -S zsh git wget
 git config --global user.name akhialomgir
 git config --global user.email akhialomgir362856@gmail.com
 chsh -s /bin/zsh

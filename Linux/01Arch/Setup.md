@@ -6,6 +6,19 @@
 
 Unzip it in the root directory of the C drive and run Arch.exe
 
+reinstall
+
+```PowerShell
+wsl --unregister Arch
+wslconfig /setdefault Arch
+```
+
+enable proxy between Win and WSL
+
+```PowerShell
+New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEthernet (WSL)"  -Action Allow
+```
+
 Switch to WSL2
 
 ```PowerShell
@@ -44,7 +57,7 @@ sudo vim /etc/pacman.d/mirrorlist
 sudo pacman -Sy archlinux-keyring
 sudo pacman -Syu
 
-sudo pacman -S zsh git
+sudo pacman -S zsh git wget
 git config --global user.name akhialomgir
 git config --global user.email akhialomgir362856@gmail.com
 chsh -s /bin/zsh
@@ -53,6 +66,10 @@ chsh -s /bin/zsh
 Put zsh-autosuggestions and Vundle from the repository, then pull vimrc and zshrc from the remote.
 
 ```sh
+export HOST_IP=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}')
+export https_proxy="http://$HOST_IP:7890"
+export http_proxy="http://$HOST_IP:7890"
+
 git clone https://github.com/akhialomgir/EnvCfgDoc.git
 cp ~/EnvCfgDoc/Linux/RCs/.zshrc ~
 cp ~/EnvCfgDoc/Linux/RCs/.vimrc ~
@@ -65,75 +82,6 @@ Vim plugin install:
 ```vim
 :PluginInstall
 q
-```
-
-## Git
-
-Generate the key and copy
-
-```sh
-sudo pacman -S openssh
-ssh-keygen -t rsa -C "akhialomgir362856@gmail.com"
-cat ~/.ssh/id_rsa.pub
-
-ssh -T git@gitee.com
-```
-
-## Jupyter
-
-install:
-
-```sh
-sudo pacman -S python3 python-pip
-# to use extensions
-sudo pacman -S nodejs npm
-pip -V
-pip install jupyterlab
-```
-
-Setting up soft links:
-
-```sh
-sudo ln -s /mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe /usr/bin/firefox
-firefox https://github.com/
-sudo ln -s /mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe /usr/bin/chrome
-chrome https://github.com/
-```
-
-config:
-
-```sh
-jupyter lab --generate-config
-```
-
-```py
-# ~/.jupyter/jupyter_lab_config.py
-import webbrowser
-webbrowser.register('firefox',None,webbrowser.GenericBrowser('/usr/bin/firefox'))
-c.NotebookApp.browser = 'firefox'
-c.ServerApp.use_redirect_file = False
-```
-
-extensions:
-
-```sh
-# install jupyterlab_onedarkpro
-jupyter lab build --dev-build=False --minimize=False
-```
-
-When creating files:
-
-> Error Unexpected error while saving file: xxx.ipynb [Errno 13] Permission denied: '/home/akhia/Code/xxx/.ipynb_checkpoints/xxx-checkpoint.ipynb'
-
-When openning files:
-
-> File Load Error for Untitled.ipynb Unhandled error
-
-```sh
-ls -la
-sudo chown akhia .ipynb_checkpoints
-# apply the following command to the whole workspace
-chown -R akhia:akhia *
 ```
 
 ## Latex

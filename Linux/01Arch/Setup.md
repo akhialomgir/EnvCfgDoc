@@ -115,6 +115,7 @@ c.ServerApp.use_redirect_file = False
 ```
 
 extensions:
+
 ```sh
 # install jupyterlab_onedarkpro
 jupyter lab build --dev-build=False --minimize=False
@@ -131,6 +132,15 @@ When openning files:
 ```sh
 ls -la
 sudo chown akhia .ipynb_checkpoints
-# apply the following command to the whole workspace 
+# apply the following command to the whole workspace
 chown -R akhia:akhia *
+```
+
+## Latex
+
+Installing dependencies for latexindent
+
+```sh
+sudo cpan -i Log::Log4perl Log::Dispatch::File\
+ YAML::Tiny File::HomeDir Unicode::GCString
 ```

@@ -56,3 +56,6 @@ export PATH=/home/akhia/.local/share/gem/ruby/3.0.0/bin:$PATH
 export MANPATH=/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH
 export INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH
 export PATH=/usr/local/texlive/2023/bin/x86_64-linux:$PATH
+
+# Shortcut
+alias macro="cd ~/Code/psychic-octo-umbrella && source macro/bin/activate && python neoMacro.py"

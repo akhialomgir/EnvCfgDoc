@@ -15,7 +15,8 @@
 10. 配置Arch环境
 11. 关闭Windows搜索中的热门搜索：
     ```PowerShell
-    reg add HKCU\Software\Policies\Microsoft\Windows\explorer /v DisableSearchBoxSuggestions /t reg_dword /d 1 /f  ```
+    reg add HKCU\Software\Policies\Microsoft\Windows\explorer /v DisableSearchBoxSuggestions /t reg_dword /d 1 /f
+    S```
 12. 卸载Onedrive
 13. 调整主题等设置内容
 14. 安装Office(T7)并使用MAS（T7）扩展证书

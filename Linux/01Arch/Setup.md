@@ -73,9 +73,9 @@ export http_proxy="http://$HOST_IP:7890"
 
 git clone https://github.com/akhialomgir/EnvCfgDoc.git
 cp ~/EnvCfgDoc/Linux/RCs/.zshrc ~
-cp ~/EnvCfgDoc/Linux/RCs/.vimrc ~
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+cp ~/EnvCfgDoc/Linux/RCs/.vimrc ~
 ```
 
 Vim plugin install:

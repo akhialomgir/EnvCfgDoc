@@ -61,6 +61,7 @@ sudo pacman -S zsh git wget
 git config --global user.name akhialomgir
 git config --global user.email akhialomgir362856@gmail.com
 git config --global core.editor vim
+git config --global init.defaultBranch master
 chsh -s /bin/zsh
 ```
 

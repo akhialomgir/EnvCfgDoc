@@ -94,3 +94,13 @@ Installing dependencies for latexindent
 sudo cpan -i Log::Log4perl Log::Dispatch::File\
  YAML::Tiny File::HomeDir Unicode::GCString
 ```
+
+## Docker
+
+> ERROR: Got permission denied while trying to connect to the Docker daemon socket
+
+```sh
+sudo groupadd docker
+sudo gpasswd -a username docker
+newgrp docker
+```

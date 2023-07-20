@@ -106,7 +106,5 @@ sudo cpan -i Log::Log4perl Log::Dispatch::File\
 > ERROR: Got permission denied while trying to connect to the Docker daemon socket
 
 ```sh
-sudo groupadd docker
-sudo gpasswd -a username docker
-newgrp docker
+sudo chmod 666 /var/run/docker.sock # TODO
 ```

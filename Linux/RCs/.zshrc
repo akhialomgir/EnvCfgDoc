@@ -58,4 +58,4 @@ export INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH
 export PATH=/usr/local/texlive/2023/bin/x86_64-linux:$PATH
 
 # Shortcut
-alias macro="cd ~/Code/psychic-octo-umbrella && source macro/bin/activate && python neoMacro.py"
+alias macro="cd ~/Code/psychic-octo-umbrella && source .venv/bin/activate && python neoMacro.py"

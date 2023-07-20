@@ -27,6 +27,12 @@ wsl --set-version Arch 2
 wsl -l -v
 ```
 
+Update WSL
+
+```PowerShell
+wsl --update
+```
+
 ## Initialization
 
 First set up the user

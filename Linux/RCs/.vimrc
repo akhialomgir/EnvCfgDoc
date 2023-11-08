@@ -1,6 +1,3 @@
-syntax on       " syntax
-filetype off    " vundle
-
 " required
 set nocompatible
 
@@ -12,6 +9,7 @@ set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 set history=1000
 
 " display
+syntax on
 set number
 set wrap
 set ruler
@@ -46,9 +44,14 @@ call plug#begin()
 
 " Make sure you use single quotes
 
+" theme
 Plug 'sonph/onehalf' , { 'rtp': 'vim' }
+" file
 Plug 'preservim/nerdtree'
 " autocmd VimEnter * NERDTree | wincmd p
+Plug 'kien/ctrlp.vim'
+" syntax 
+Plug 'tpope/vim-commentary'
 Plug 'dense-analysis/ale'
 
 " Initialize plugin system
@@ -58,6 +61,7 @@ call plug#end()
 "   filetype indent off   " Disable file-type-specific indentation
 "   syntax off            " Disable syntax highlighting
 
+" sonph/onehalf
 set t_Co=256
 " set cursorline
 colorscheme onehalfdark

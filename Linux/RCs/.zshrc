@@ -3,9 +3,15 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # Theme
-autoload -Uz promptinit
-promptinit
-prompt oliver
+autoload -U colors && colors
+# Load version control information
+autoload -Uz vcs_info
+precmd() { vcs_info }
+# Format the vcs_info_msg_0_ variable
+zstyle ':vcs_info:git:*' formats '%b'
+# Set up the prompt (with git branch name)
+setopt PROMPT_SUBST
+PROMPT='%{$fg[yellow]%}%n%{$reset_color%}: %{$fg[blue]%}%1~ %F{yellow}${vcs_info_msg_0_} %{$reset_color%}%# '
 
 # ZSH Plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -29,10 +35,3 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
-## WSL
-## DISPLAY
-#export HOST_IP=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}')
-#export DISPLAY="$HOST_IP:0.0"
-## Proxy
-#export https_proxy="http://$HOST_IP:7890"
-#export http_proxy="http://$HOST_IP:7890"

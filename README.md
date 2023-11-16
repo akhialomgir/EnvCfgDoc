@@ -1,4 +1,5 @@
 # EnvCfgDoc
-Backup documentation on environment configuration
+
+Backup documentation for environment configuration
 
 ## TODOs

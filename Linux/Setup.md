@@ -11,3 +11,10 @@ cp ~/EnvCfgDoc/Linux/RCs/.zshrc ~ \
 cat ~/EnvCfgDoc/Linux/RCs/.zshrc ~/EnvCfgDoc/Linux/RCs/.zshrc_WSL2 > ~/.zshrc \
 && source ~/.zshrc  # WSL2
 ```
+
+## TMUX setup
+
+```sh
+ sudo pacman -S tmux
+ cp ~/EnvCfgDoc/Linux/RCs/.tmux.conf ~
+```

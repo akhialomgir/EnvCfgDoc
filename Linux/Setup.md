@@ -18,3 +18,19 @@ cat ~/EnvCfgDoc/Linux/RCs/.zshrc ~/EnvCfgDoc/Linux/RCs/.zshrc_WSL2 > ~/.zshrc \
  sudo pacman -S tmux
  cp ~/EnvCfgDoc/Linux/RCs/.tmux.conf ~
 ```
+
+# VIM setup
+
+```sh
+sudo pacman -S vim
+cp ~/EnvCfgDoc/Linux/RCs/.vimrc ~
+vim
+```
+
+# NeoVIM setup
+
+```sh
+sudo pacman -S neovim
+cp -r cp -r ~/EnvCfgDoc/Linux/RCs/nvim ~/.config/
+neovim
+```

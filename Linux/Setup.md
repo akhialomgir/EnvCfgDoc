@@ -31,6 +31,6 @@ vim
 
 ```sh
 sudo pacman -S neovim
-cp -r cp -r ~/EnvCfgDoc/Linux/RCs/nvim ~/.config/
+cp -r ~/EnvCfgDoc/Linux/RCs/nvim ~/.config/
 neovim
 ```

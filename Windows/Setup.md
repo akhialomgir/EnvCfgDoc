@@ -29,5 +29,5 @@
 
 ## Tips
 
-1. Boot-up path: C:\Users\akhia\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+1. Boot-up path: C:\Users\akiha\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 2. win right-click menu cleanup: Computer\HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers

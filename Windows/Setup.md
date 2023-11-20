@@ -9,7 +9,7 @@
 ## 软件
 
 1. 卸载 Onedrive
-2. 安装 Chrome
+2. 安装 Chrome (配置 Surfingkeys 和 油猴)
 3. 安装 QQ
 4. 安装 Clash
 

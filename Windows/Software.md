@@ -9,7 +9,6 @@
 - [Everything](https://www.voidtools.com/Everything-1.4.1.1005.x64-Setup.exe)
 - [Toolbar](https://github.com/stnkl/EverythingToolbar/releases/download/0.6.3/EverythingToolbar-0.6.3.msi)
 - [7zip](https://www.7-zip.org/a/7z1900-x64.exe)
-- [Clash](https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.15.3/Clash.for.Windows.Setup.0.15.3.exe)
 - [Terminus](https://github.com/Eugeny/terminus/releases/download/v1.0.137/terminus-1.0.137-setup.exe)
 - [X410](https://www.microsoft.com/store/apps/9nlp712zmn9q)
 - [Python](https://www.python.org/ftp/python/3.8.3/python-3.8.3-amd64.exe)

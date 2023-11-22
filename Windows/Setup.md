@@ -28,11 +28,21 @@
    Setting -> Administrator -> Change user account control settings
 2. 从 **硬件** 中使用脚本 cap2ctrl.reg，重启
 3. 关闭 Windows 搜索中的热门搜索：
-    ```PowerShell
-    reg add HKCU\Software\Policies\Microsoft\Windows\explorer /v DisableSearchBoxSuggestions /t reg_dword /d 1 /f
-    ```
+   ```PowerShell
+   reg add HKCU\Software\Policies\Microsoft\Windows\explorer /v DisableSearchBoxSuggestions /t reg_dword /d 1 /f
+   ```
 4. 关闭公共防火墙以在 WSL2 中使用代理，使用管理员权限 PowerShell 输入以下命令允许 WSL2 通过防火墙
    ```PowerShell
      New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEthernet (WSL)"  -Action Allow
    ```
 
+# Git
+
+先配置 Git Bash 后运行:
+
+```sh
+git config --global user.name "akhialomgir"
+git config --global user.email “akhialomgir362856@gmail.com”
+ssh-keygen
+cat ~/.ssh/id_rsa.pub # 复制到 Github
+```

@@ -161,7 +161,7 @@ sudo systemctl start bluetooth.service
 ```
 
 ```sh
-# 问题：现在没有 windows 分区 TODO 感觉不是最优 但是 os-prober一堆问题 可以先补救下
+# 问题：现在没有 windows 分区 TODO mirai 感觉不是最优 但是 os-prober一堆问题 可以先补救下
 /etc/grub.d/40_custom
 
 menuentry "Windows" {
@@ -184,7 +184,7 @@ systemctl enable NetworkManager # 已解决+
 ```
 
 ```sh
-# 同步 windows 和 arch 的蓝牙 TODO
+# 同步 windows 和 arch 的蓝牙 TODO mirai
 ```
 
 ```sh
@@ -213,7 +213,7 @@ Usually by adding export PLASMA_USE_QT_SCALING=1 to your ~/.xprofile
 ```sh
 # grub 字体太小、编辑顺序 todo
 # 顺序
-sudo mv /etc/grub.d/30_os-prober /etc/grub.d/05_os-prober
+sudo mv /etc/grub.d/30_os-prober /etc/grub.d/05_os-prober # 无用（噔噔咚
 # 字体大小
 
 ```

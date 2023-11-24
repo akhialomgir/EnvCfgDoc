@@ -172,6 +172,12 @@ sudo vim /usr/share/X11/xkb/keycodes/evdev
     <CAPS> = 66; => 37
     <LCTL> = 37; => 66
 
+# V2rayA
+sudo pacman -S v2ray
+yay -S v2raya
+sudo systemctl enable v2raya.service
+sudo systemctl start v2raya.service
+
 # grub 加入 windows 分区 美化
 # 从 store.kde.org/p/1009236 下载主题（如果字小就2k）
 cd ~/Downloads
@@ -212,6 +218,3 @@ uname -a # 检查输出有没有 surface 判断内核有无被使用
 # 可能需要安装 libwacom-surface 待验证
 ```
 
-```sh
-# V2rayA TODO
-```

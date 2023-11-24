@@ -123,7 +123,13 @@ su akhia
 yay -S dislocker
 sudo grub-mkconfig -o /boot/grub/grub.cfg # 检查输出是否有 Windows
 
-cd ~
+reboot # 重启进入本地 Arch
+# 此时未安装图形界面
+
+nmcli dev wifi list
+nmcli dev wifi connect PDCN_5G -a
+
+# 安装 linux-surface 内核
 curl -o surface.asc -sSL https://raw.githubusercontent.com/linux-surface/linux-surface/master/pkg/keys/surface.asc
 sudo pacman-key --add surface.asc
 sudo pacman-key --finger 56C464BAAC421453
@@ -133,16 +139,12 @@ sudo vim /etc/pacman.conf
     Server = https://pkg.surfacelinux.com/arch/
 sudo pacman -Syu
 sudo pacman -S linux-surface linux-surface-headers iptsd linux-firmware-marvell # current 可能需要安装命令行代理才能跑 居然Syy就解决了... 也没有完全解决iptsd 还是要看运气
-sudo grub-mkconfig -o /boot/grub/grub.cfg
+sudo mount /dev/nvme0n1p5 /boot
+sudo grub-mkconfig -o /boot/grub/grub.cfg # 注意输出内容中是否使用surface kernel
 
 sudo systemctl enable NetworkManager # 更换内核需要重新 enable
 
-reboot # 重启
-# 以下未安装图形界面
-
-nmcli dev wifi list
-nmcli dev wifi connect PDCN_5G -a
-
+# 安装 KDE
 sudo pacman -S xorg plasma sddm konsole dolphin ark gwenview
 sudo systemctl enable sddm
 # 字体
@@ -163,7 +165,7 @@ sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
 
 reboot # 重启
-# 以下有图形界面
+# 此时有图形界面
 
 # Ctrl <-> Caps
 sudo vim /usr/share/X11/xkb/keycodes/evdev
@@ -205,6 +207,9 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 # 内核没有被启用 TODO
 uname -a # 检查输出有没有 surface 判断内核有无被使用
 # surface 内核没有启用
+# 答案是安装内核后立刻刷新grub，否则会继续使用默认内核
+# 然而内核问题解决后依然不可使用触屏
+# 可能需要安装 libwacom-surface 待验证
 ```
 
 ```sh

@@ -43,6 +43,6 @@
 ```sh
 git config --global user.name "akhialomgir"
 git config --global user.email “akhialomgir362856@gmail.com”
-ssh-keygen
+ssh-keygen -t rsa
 cat ~/.ssh/id_rsa.pub # 复制到 Github
 ```

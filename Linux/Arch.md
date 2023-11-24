@@ -214,3 +214,7 @@ wget -O ~/.config/clash/config.yaml xxx # 导入链接
 # 同步 windows 和 arch 的蓝牙 用处不大 可以后整、mirai
 https://wiki.archlinuxcn.org/wiki/%E8%93%9D%E7%89%99#Dual_boot_pairing
 ```
+
+```sh
+# V2rayA TODO
+```

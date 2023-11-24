@@ -5,11 +5,11 @@
 ```sh
 sudo pacman -S zsh zsh-autosuggestions zsh-syntax-highlighting -y
 
-cp ~/EnvCfgDoc/Linux/cfgs/.zshrc ~ \
-&& source ~/.zshrc  # common Linux
+cp ~/EnvCfgDoc/Linux/cfgs/.zshrc ~ && zsh # common Linux
 
-cat ~/EnvCfgDoc/Linux/cfgs/.zshrc ~/EnvCfgDoc/Linux/cfgs/.zshrc_WSL2 > ~/.zshrc \
-&& source ~/.zshrc  # WSL2
+cat ~/EnvCfgDoc/Linux/cfgs/.zshrc ~/EnvCfgDoc/Linux/cfgs/.zshrc_WSL2 > ~/.zshrc && zsh # WSL2
+
+chsh -s $(which zsh)
 ```
 
 ## TMUX setup

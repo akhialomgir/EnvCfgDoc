@@ -196,23 +196,15 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # 美化 sddm
 # 系统设置 -> 侧栏：开机和关机 -> 登录屏幕（SDDM）
+
+# 同步 windows 和 arch 的蓝牙
+# https://wiki.archlinuxcn.org/wiki/%E8%93%9D%E7%89%99#%E5%8F%8C%E7%B3%BB%E7%BB%9F%E9%85%8D%E5%AF%B9
 ```
 
 ```sh
 # 内核没有被启用 TODO
 uname -a # 检查输出有没有 surface 判断内核有无被使用
 # surface 内核没有启用
-```
-
-```sh
-# clash TODO
-https://blog.linioi.com/posts/clash-on-arch/
-wget -O ~/.config/clash/config.yaml xxx # 导入链接
-```
-
-```sh
-# 同步 windows 和 arch 的蓝牙 用处不大 可以后整、mirai
-https://wiki.archlinuxcn.org/wiki/%E8%93%9D%E7%89%99#Dual_boot_pairing
 ```
 
 ```sh

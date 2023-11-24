@@ -1,5 +1,18 @@
 # Setup
 
+## Git setup
+
+```sh
+sudo pacman -S git
+git config --global user.name "akhialomgir"
+git config --global user.email “akhialomgir362856@gmail.com”
+ssh-keygen
+cat ~/.ssh/id_rsa.pub # copy to Github
+# or
+cat ~/.ssh/id_ed25519.pub # copy to Github
+```
+
+
 ## ZSH setup
 
 ```sh

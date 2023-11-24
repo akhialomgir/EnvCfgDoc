@@ -178,6 +178,9 @@ yay -S v2raya
 sudo systemctl enable v2raya.service
 sudo systemctl start v2raya.service
 
+# libwacom-surface 触屏驱动
+yay -S libwacom-surface
+
 # grub 加入 windows 分区 美化
 # 从 store.kde.org/p/1009236 下载主题（如果字小就2k）
 cd ~/Downloads
@@ -208,13 +211,3 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 # 同步 windows 和 arch 的蓝牙
 # https://wiki.archlinuxcn.org/wiki/%E8%93%9D%E7%89%99#%E5%8F%8C%E7%B3%BB%E7%BB%9F%E9%85%8D%E5%AF%B9
 ```
-
-```sh
-# 内核没有被启用 TODO
-uname -a # 检查输出有没有 surface 判断内核有无被使用
-# surface 内核没有启用
-# 答案是安装内核后立刻刷新grub，否则会继续使用默认内核
-# 然而内核问题解决后依然不可使用触屏
-# 可能需要安装 libwacom-surface 待验证
-```
-

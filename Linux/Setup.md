@@ -13,6 +13,13 @@ cat ~/.ssh/id_rsa.pub # or
 # or use xclip directly
 xclip -sel clip < ~/.ssh/id_rsa.pub # or
  xclip -sel clip < ~/.ssh/id_ed25519.pub
+# when using VPN: https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port
+# Using SSH over the HTTPS port
+vim ~/.ssh/config
+    Host github.com
+        Hostname ssh.github.com
+        Port 443
+        User git
 ssh -v git@github.com
 ```
 

@@ -7,9 +7,12 @@ sudo pacman -S git
 git config --global user.name "akhialomgir"
 git config --global user.email “akhialomgir362856@gmail.com”
 ssh-keygen
-cat ~/.ssh/id_rsa.pub # copy to Github
-# or
-cat ~/.ssh/id_ed25519.pub # copy to Github
+# copy to Github
+cat ~/.ssh/id_rsa.pub # or
+ cat ~/.ssh/id_ed25519.pub
+# or use xclip directly
+xclip -sel clip < ~/.ssh/id_rsa.pub # or
+ xclip -sel clip < ~/.ssh/id_ed25519.pub
 ssh -v git@github.com
 ```
 

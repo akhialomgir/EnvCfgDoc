@@ -7,47 +7,6 @@
 - [Archlinux WIKI 安装指南](https://wiki.archlinuxcn.org/wiki/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97)
 - [Arch Linux + Windows 双系统安装教程](https://blog.linioi.com/posts/18/)
 
-##
-
-下载内核前 https://stackoverflow.com/questions/74794022/curl-28-failed-to-connect-to-raw-githubusercontent-com-port-443-connection-t
-
-## pacstrap
-
-```sh
-# base, base-devel      -> basic software
-# linux                 -> core
-# linux-firmware        -> firmware
-# nano, vim             -> editor
-# e2fsprogs             -> ext4
-# ntfs-3g               -> windows
-pacstrap /mnt base base-devel linux linux-firmware nano vim e2fsprogs ntfs-3g
-```
-
-## 安装过程
-
-1. 分配磁盘空间
-2. 禁止快速启动、安全启动
-3. 设置时区偏移
-4. 烧录启动盘并启动
-5. 连接网络同步时间
-6. 硬盘分区
-7. 挂载分区
-8. 安装基本系统并生成分区表
-9. 进入系统
-10. 创建用户组
-11. 配置主机名
-12. hosts 配置 github (分两次)
-13. 配置 Grub 引导
-14. 配置语言、区域（en_GB.UTF-8）
-15. 启动 NetworkManager
-16. 添加 Arch Linux CN 源，并安装 yay
-17. 解决 windows 加密，重新生成 Grub 配置文件
-18. 如果为特殊机型（Surface），安装对应内核
-19. 测试是否能正常运行，如果可以再进行下述操作
-20. 安装 KDE
-21. 安装字体
-22. 安装 fcitx5-im, fcitx5-chinese-addons
-
 ## 详细流程
 
 ```sh
@@ -210,4 +169,19 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # 同步 windows 和 arch 的蓝牙
 # https://wiki.archlinuxcn.org/wiki/%E8%93%9D%E7%89%99#%E5%8F%8C%E7%B3%BB%E7%BB%9F%E9%85%8D%E5%AF%B9
+```
+
+## pip
+
+```sh
+sudo pacman -S python3
+# 库内包直接使用 pacman 安装
+sudo pacman -S python-xxx
+# 库外包建立虚拟环境后安装
+python -m venv ./venv
+source .venv/bin/activate
+# 安装镜像避免代理导致的 SSL 问题
+pip install --upgrade pip # 如果不行先关代理
+pip install -i https://mirrors.ustc.edu.cn/pypi/web/simple pip -U
+pip config set global.index-url https://mirrors.ustc.edu.cn/pypi/web/simple
 ```

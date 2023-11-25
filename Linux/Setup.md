@@ -10,7 +10,7 @@ ssh-keygen
 cat ~/.ssh/id_rsa.pub # copy to Github
 # or
 cat ~/.ssh/id_ed25519.pub # copy to Github
-ssh -T git@github.com
+ssh -v git@github.com
 ```
 
 

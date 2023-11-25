@@ -4,8 +4,8 @@
 
 ```sh
 sudo pacman -S git
-git config --global user.name "akhialomgir"
-git config --global user.email “akhialomgir362856@gmail.com”
+git config --global user.name akhialomgir
+git config --global user.email akhialomgir362856@gmail.com
 ssh-keygen
 # copy to Github
 cat ~/.ssh/id_rsa.pub # or

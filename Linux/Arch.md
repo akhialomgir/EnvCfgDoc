@@ -136,6 +136,9 @@ sudo pacman -S v2ray
 yay -S v2raya
 sudo systemctl enable v2raya.service
 sudo systemctl start v2raya.service
+sudo vim /etc/environment # 配置命令行代理
+    http_proxy=http://127.0.0.1:20172/
+    https_proxy=http://127.0.0.1:20172/
 
 # libwacom-surface 触屏驱动
 yay -S libwacom-surface
@@ -192,6 +195,6 @@ pip config set global.index-url https://mirrors.ustc.edu.cn/pypi/web/simple
 ## TODO
 
 - 使用代理时网络会显示 Limited Connectivity
-- 使用代理时的 git pip SSL 问题，疑似需要配置proxy
+- 使用代理时的 pip SSL 问题，疑似需要配置proxy
 - 如果合上键盘盖超过一定时间会发热死机，原因不明
 - fontconfig 待自定义

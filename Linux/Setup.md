@@ -23,7 +23,6 @@ vim ~/.ssh/config
 ssh -v git@github.com
 ```
 
-
 ## ZSH setup
 
 ```sh
@@ -31,7 +30,7 @@ sudo pacman -S zsh zsh-autosuggestions zsh-syntax-highlighting -y
 
 cp ~/EnvCfgDoc/Linux/cfgs/.zshrc ~ && zsh # common Linux
 
-cat ~/EnvCfgDoc/Linux/cfgs/.zshrc ~/EnvCfgDoc/Linux/cfgs/.zshrc_WSL2 > ~/.zshrc && zsh # WSL2
+cat ~/EnvCfgDoc/Linux/cfgs/.zshrc ~/EnvCfgDoc/Linux/cfgs/.zshrc_clash_win > ~/.zshrc && zsh # WSL2
 
 chsh -s $(which zsh)
 ```

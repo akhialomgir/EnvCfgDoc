@@ -57,4 +57,7 @@ vim
 sudo pacman -S neovim
 cp -r ~/EnvCfgDoc/Linux/cfgs/nvim ~/.config/
 nvim
+# module 'lazy' not found
+rm -rf ~/.local/share/nvim/lazy
+# OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443
 ```

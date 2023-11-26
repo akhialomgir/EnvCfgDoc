@@ -166,8 +166,9 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # 美化 sddm
 # 系统设置 -> 侧栏：开机和关机 -> 登录屏幕（SDDM）
+# sddm dpi
 sudo vim /usr/lib/sddm/sddm.conf.d/default.conf
-    ServerArguments=-nolisten -tcp -dpi 140
+    ServerArguments=-nolisten -tcp -dpi 150
 
 # 同步 windows 和 arch 的蓝牙
 # https://wiki.archlinuxcn.org/wiki/%E8%93%9D%E7%89%99#%E5%8F%8C%E7%B3%BB%E7%BB%9F%E9%85%8D%E5%AF%B9

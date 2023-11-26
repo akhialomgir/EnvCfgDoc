@@ -195,6 +195,5 @@ pip config set global.index-url https://mirrors.ustc.edu.cn/pypi/web/simple
 ## TODO
 
 - 使用代理时网络会显示 Limited Connectivity
-- 使用代理时的 pip SSL 问题，疑似需要配置proxy
 - 如果合上键盘盖超过一定时间会发热死机，原因不明
 - fontconfig 待自定义

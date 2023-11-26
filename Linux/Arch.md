@@ -139,6 +139,10 @@ sudo systemctl start v2raya.service
 sudo vim /etc/environment # 配置命令行代理
     http_proxy=http://127.0.0.1:20172/
     https_proxy=http://127.0.0.1:20172/
+sudo vim /etc/NetworkManager/conf.d/20-20-connectivity.conf # 解决 limited-connectivity 问题
+    [connectivity]
+    enabled=True
+    url=https://ping.archlinux.org
 
 # libwacom-surface 触屏驱动
 yay -S libwacom-surface
@@ -194,6 +198,5 @@ pip config set global.index-url https://mirrors.ustc.edu.cn/pypi/web/simple
 
 ## TODO
 
-- 使用代理时网络会显示 Limited Connectivity
 - 如果合上键盘盖超过一定时间会发热死机，原因不明
 - fontconfig 待自定义

@@ -55,8 +55,22 @@ vim
 ```sh
 sudo pacman -S neovim
 cp -r ~/EnvCfgDoc/Linux/cfgs/nvim ~/.config/
+# 需要配置打 patch 的 FiraCode 以完整显示终端和 nvim 中的图标
 nvim
 rm -rf ~/.local/share/nvim/lazy # if module 'lazy' not found
 # OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 疑似需要配置 git 代理端口
-# 需要配置打 patch 的 FiraCode 以完整显示终端和 nvim 中的图标
 ```
+
+## Plugins
+
+- Lazy.nvim: 包管理器
+
+### Git
+
+- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+- [diffview.nvim](https://github.com/sindrets/diffview.nvim)
+- [vim-fugitive](https://github.com/tpope/vim-fugitive)
+
+### Theme
+
+- [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)

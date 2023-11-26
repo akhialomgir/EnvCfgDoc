@@ -56,5 +56,5 @@ vim
 ```sh
 sudo pacman -S neovim
 cp -r ~/EnvCfgDoc/Linux/cfgs/nvim ~/.config/
-neovim
+nvim
 ```

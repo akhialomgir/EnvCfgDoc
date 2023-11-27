@@ -196,4 +196,4 @@ pip config set global.index-url https://mirrors.ustc.edu.cn/pypi/web/simple
 
 ## TODO
 
-- 如果合上键盘盖超过一定时间会发热死机，原因不明 > 应该是内核问题 等更新
+- 如果合上键盘盖超过一定时间会发热死机，原因不明 > 应该是内核问题 等更新 https://github.com/linux-surface/linux-surface/issues/1224

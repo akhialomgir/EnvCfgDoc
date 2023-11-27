@@ -55,10 +55,9 @@ vim
 ```sh
 sudo pacman -S neovim
 cp -r ~/EnvCfgDoc/Linux/cfgs/nvim ~/.config/
-sudo pacman -S ttf-firacode-nerd # 然而图标依然不行
+sudo pacman -S ttf-firacode-nerd # set as default in console profile
 nvim
 rm -rf ~/.local/share/nvim/lazy # if module 'lazy' not found
-# OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 疑似需要配置 git 代理端口
 ```
 
 ## Plugins

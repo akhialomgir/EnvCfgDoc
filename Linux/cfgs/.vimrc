@@ -11,6 +11,7 @@ set history=1000
 " display
 syntax on
 set number
+set relativenumber
 set wrap
 set ruler
 set cursorline

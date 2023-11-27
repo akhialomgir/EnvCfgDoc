@@ -197,4 +197,3 @@ pip config set global.index-url https://mirrors.ustc.edu.cn/pypi/web/simple
 ## TODO
 
 - 如果合上键盘盖超过一定时间会发热死机，原因不明
-- fontconfig 待自定义

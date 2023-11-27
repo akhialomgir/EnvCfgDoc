@@ -136,9 +136,7 @@ sudo pacman -S v2ray
 yay -S v2raya
 sudo systemctl enable v2raya.service
 sudo systemctl start v2raya.service
-sudo vim /etc/environment # 配置命令行代理
-    http_proxy=http://127.0.0.1:20172/
-    https_proxy=http://127.0.0.1:20172/
+# 不需要配置 env，否则会出现ssl问题
 sudo vim /etc/NetworkManager/conf.d/20-20-connectivity.conf # 解决 limited-connectivity 问题
     [connectivity]
     enabled=True

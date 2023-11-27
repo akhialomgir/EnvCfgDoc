@@ -110,7 +110,7 @@ sudo systemctl enable sddm
 sudo pacman -S adobe-source-han-sans-cn-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-sarasa-gothic ttf-nerd-fonts-symbols ttf-twemoji
 # 字形调整
 mkdir -p ~/.config/fontconfig
-curl -o ~/.config/fontconfig/fonts.conf -sSL https://raw.githubusercontent/szclsya/dotfiles/blob/master/fontconfig/fonts.conf
+curl -o ~/.config/fontconfig/fonts.conf -sSL https://raw.githubusercontent.com/akhialomgir/EnvCfgDoc/main/Linux/cfgs/fonts.conf
 # 中文输入法
 sudo pacman -S fcitx5-im fcitx5-chinese-addons
 sudo vim /etc/environment

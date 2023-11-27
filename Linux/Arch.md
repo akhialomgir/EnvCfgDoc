@@ -107,7 +107,7 @@ sudo systemctl enable NetworkManager # 更换内核需要重新 enable
 sudo pacman -S xorg plasma sddm konsole dolphin ark gwenview
 sudo systemctl enable sddm
 # 字体
-sudo pacman -S adobe-source-han-sans-cn-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-sarasa-gothic ttf-nerd-fonts-symbols
+sudo pacman -S adobe-source-han-sans-cn-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-sarasa-gothic ttf-nerd-fonts-symbols ttf-twemoji
 # 字形调整
 mkdir -p ~/.config/fontconfig
 curl -o ~/.config/fontconfig/fonts.conf -sSL https://raw.githubusercontent/szclsya/dotfiles/blob/master/fontconfig/fonts.conf

@@ -55,21 +55,9 @@ vim
 ```sh
 sudo pacman -S neovim
 cp -r ~/EnvCfgDoc/Linux/cfgs/nvim ~/.config/
-sudo pacman -S ttf-firacode-nerd # set as default in console profile
+sudo pacman -S ttf-firacode-nerd # set as default font in console profile
 nvim
 rm -rf ~/.local/share/nvim/lazy # if module 'lazy' not found
 ```
 
-## Plugins
-
-- Lazy.nvim: 包管理器
-
-### Git
-
-- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
-- [diffview.nvim](https://github.com/sindrets/diffview.nvim)
-- [vim-fugitive](https://github.com/tpope/vim-fugitive)
-
-### Theme
-
-- [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
+待解决neovim和vim在tmux中跨窗格的复制问题

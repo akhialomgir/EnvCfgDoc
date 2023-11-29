@@ -61,4 +61,3 @@ nvim
 rm -rf ~/.local/share/nvim/lazy # if module 'lazy' not found
 ```
 
-待解决neovim和vim在tmux中跨窗格的复制问题

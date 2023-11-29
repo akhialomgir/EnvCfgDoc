@@ -27,6 +27,9 @@ set smartindent
 set smarttab
 set tabstop=4
 
+# clipboard
+set clipboard=unnamedplus
+
 " automatic installation for vim-plug
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))

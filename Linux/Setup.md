@@ -46,7 +46,7 @@ chsh -s $(which zsh)
 # VIM setup
 
 ```sh
-sudo pacman -S vim
+sudo pacman -S gvim
 cp ~/EnvCfgDoc/Linux/cfgs/.vimrc ~
 vim
 ```

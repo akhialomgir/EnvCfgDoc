@@ -27,7 +27,7 @@ set smartindent
 set smarttab
 set tabstop=4
 
-# clipboard
+" clipboard
 set clipboard=unnamedplus
 
 " automatic installation for vim-plug

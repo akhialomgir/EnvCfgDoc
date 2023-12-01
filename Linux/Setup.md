@@ -39,7 +39,7 @@ chsh -s $(which zsh)
 ## TMUX setup
 
 ```sh
- sudo pacman -S tmux
+ sudo pacman -S tmux xclip
  cp ~/EnvCfgDoc/Linux/cfgs/.tmux.conf ~
 ```
 

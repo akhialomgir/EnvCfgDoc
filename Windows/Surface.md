@@ -2,7 +2,7 @@
 
 ## Fix brightness auto-adjustment issue
 
-modify value of "FeatureTestControl":
+Modify value of "FeatureTestControl":
 
 ```reg
 REGEDIT4

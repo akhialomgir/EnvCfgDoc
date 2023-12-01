@@ -177,6 +177,12 @@ sudo vim /usr/lib/sddm/sddm.conf.d/default.conf
 
 # 同步 windows 和 arch 的蓝牙
 # https://wiki.archlinuxcn.org/wiki/%E8%93%9D%E7%89%99#%E5%8F%8C%E7%B3%BB%E7%BB%9F%E9%85%8D%E5%AF%B9
+
+# qq
+yay -S linuxqq
+
+# 截图
+sudo pacman -S spectacle
 ```
 
 ## pip

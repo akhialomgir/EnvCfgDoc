@@ -475,7 +475,6 @@ settings.theme = `
 // ---- Search Engines -----
 removeSearchAlias('b', 's');
 removeSearchAlias('d', 's');
-removeSearchAlias('g', 's');
 removeSearchAlias('h', 's');
 removeSearchAlias('w', 's');
 removeSearchAlias('y', 's');

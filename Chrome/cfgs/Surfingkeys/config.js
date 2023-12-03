@@ -493,3 +493,6 @@ addSearchAlias('r', 'reddit', 'https://libreddit.spike.codes/r/', 's');
 addSearchAlias('st', 'steam', 'https://store.steampowered.com/search/?term=', 's');
 addSearchAlias('wiki', 'wikipedia', 'https://en.wikipedia.org/wiki/Special:Search/', 's');
 addSearchAlias('y', 'yt', 'https://invidious.snopyta.org/search?q=', 's');
+
+// ---- Keymaps -----
+unmap('<Ctrl-\'>');

@@ -50,6 +50,11 @@ C-a p       Select the previous window
 C-a w       Choose a window from a list
 C-a .       Move the current window
 
+### Session
+
+C-a $       Rename current session
+C-a s       Choose a session from a list
+
 ### Client
 
 C-a C-z     Suspend the current client
@@ -61,11 +66,6 @@ C-a D       Choose a client from a list
 C-a L       Switch to the last client
 C-a d       Detach the current client
 C-a r       Redraw the current client
-
-### Session
-
-C-a $       Rename current session
-C-a s       Choose a session from a list
 
 ### Copy
 

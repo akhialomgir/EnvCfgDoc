@@ -119,7 +119,7 @@ sudo vim /etc/environment
     XMODIFIERS=@im=fcitx
     SDL_IM_MODULE=fcitx
 # 蓝牙
-sudo pacman -S bluez bluez-utils
+sudo pacman -S bluez bluez-utils pulseaudio-bluetooth # PB 修复耳机连接问题
 sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
 
@@ -203,5 +203,5 @@ pip config set global.index-url https://mirrors.ustc.edu.cn/pypi/web/simple
 ## TODO
 
 - 如果合上键盘盖超过一定时间会发热死机，原因不明 > 应该是内核问题 等更新 https://github.com/linux-surface/linux-surface/issues/1224
-- 耳机无法连接
+- vlc-git 无法播放mp4视频，疑似没有使用正确硬件导致有声音没视频
 - NeoMutt

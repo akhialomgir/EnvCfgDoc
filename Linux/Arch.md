@@ -200,13 +200,29 @@ pip install -i https://mirrors.ustc.edu.cn/pypi/web/simple pip -U
 pip config set global.index-url https://mirrors.ustc.edu.cn/pypi/web/simple
 ```
 
-## vlc
+## VLC
 
 ```sh
 sudo pacman -S vlc # 不要下开发分支
 ```
 
-## TODO
+## NeoMutt
+
+```sh
+sudo pacman -S neomutt msmtp pass notmuch urlview lynx cronie
+yay -S abook pam-gnupg
+mkdir -p ~/Downloads/gitthings/
+git clone https://github.com/LukeSmithxyz/mutt-wizard ~/Downloads/gitthings/mutt-wizard/
+cd ~/Downloads/gitthings/mutt-wizard/
+sudo make install
+gpg --full-generate-key
+pass init akhialomgir362856@gmail.com
+mw -a akhialomgir362856@gmail.com # google app specific password
+mailsync akhialomgir362856@gmail.com
+neomutt #TODO:使用 nvim 作为编辑器、开启时自动同步邮件
+```
+
+## TODOs
 
 - 如果合上键盘盖超过一定时间会发热死机，原因不明 > 应该是内核问题 等更新 https://github.com/linux-surface/linux-surface/issues/1224
-- NeoMutt
+- 终端中"体"显示异常， Fira Code Nerd font 配置问题

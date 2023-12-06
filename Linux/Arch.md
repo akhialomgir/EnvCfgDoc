@@ -107,7 +107,7 @@ sudo systemctl enable NetworkManager # 更换内核需要重新 enable
 sudo pacman -S xorg plasma sddm konsole dolphin ark gwenview
 sudo systemctl enable sddm
 # 字体
-sudo pacman -S adobe-source-han-sans-cn-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-sarasa-gothic ttf-nerd-fonts-symbols ttf-twemoji
+sudo pacman -S adobe-source-han-sans-cn-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-sarasa-gothic ttf-nerd-fonts-symbols ttf-twemoji ttf-sarasa-gothic # sarasa-gothic 解决中文问题
 # 字形调整
 mkdir -p ~/.config/fontconfig
 curl -o ~/.config/fontconfig/fonts.conf -sSL https://raw.githubusercontent.com/akhialomgir/EnvCfgDoc/main/Linux/cfgs/fonts.conf
@@ -225,4 +225,3 @@ neomutt #TODO:使用 nvim 作为编辑器、开启时自动同步邮件
 ## TODOs
 
 - 如果合上键盘盖超过一定时间会发热死机，原因不明 > 应该是内核问题 等更新 https://github.com/linux-surface/linux-surface/issues/1224
-- 终端中"体"显示异常， Fira Code Nerd font 配置问题

@@ -200,8 +200,13 @@ pip install -i https://mirrors.ustc.edu.cn/pypi/web/simple pip -U
 pip config set global.index-url https://mirrors.ustc.edu.cn/pypi/web/simple
 ```
 
+## vlc
+
+```sh
+sudo pacman -S vlc # 不要下开发分支
+```
+
 ## TODO
 
 - 如果合上键盘盖超过一定时间会发热死机，原因不明 > 应该是内核问题 等更新 https://github.com/linux-surface/linux-surface/issues/1224
-- vlc-git 无法播放mp4视频，疑似没有使用正确硬件导致有声音没视频
 - NeoMutt

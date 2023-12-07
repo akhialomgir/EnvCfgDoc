@@ -71,6 +71,10 @@ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 pacman -S networkmanager # 此时不 enable 因为如果更换内核会找不到版本号
 
+# 使用科大源
+vim /etc/pacman.d/mirrorlist
+  Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
+# 添加 archlinuxcn 源
 vim /etc/pacman.conf
     [archlinuxcn]
     Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
@@ -130,6 +134,10 @@ reboot # 重启
 sudo vim /usr/share/X11/xkb/keycodes/evdev
     <CAPS> = 66; => 37
     <LCTL> = 37; => 66
+
+# 修复 Surface 内核导致合上键盘盖死机问题
+sudo nvim /etc/systemd/logind.conf
+    HandleLidSwitch=poweroff
 
 # V2rayA
 sudo pacman -S v2ray
@@ -219,9 +227,9 @@ gpg --full-generate-key
 pass init akhialomgir362856@gmail.com
 mw -a akhialomgir362856@gmail.com # google app specific password
 mailsync akhialomgir362856@gmail.com
-neomutt #TODO:使用 nvim 作为编辑器、开启时自动同步邮件
+neomutt #TODO:开启时自动同步邮件、folder显示问题（isync
+
+nvim ~/.config/mutt/muttrc
+
 ```
 
-## TODOs
-
-- 如果合上键盘盖超过一定时间会发热死机，原因不明 > 应该是内核问题 等更新 https://github.com/linux-surface/linux-surface/issues/1224

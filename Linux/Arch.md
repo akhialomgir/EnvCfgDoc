@@ -4,7 +4,7 @@
 
 主要参考以下安装指南：
 
-- [Archlinux WIKI 安装指南](https://wiki.archlinuxcn.org/wiki/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97)
+- [Arch Linux WIKI 安装指南](https://wiki.archlinuxcn.org/wiki/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97)
 - [Arch Linux + Windows 双系统安装教程](https://blog.linioi.com/posts/18/)
 
 ## 详细流程
@@ -149,6 +149,11 @@ sudo vim /etc/NetworkManager/conf.d/20-20-connectivity.conf # 解决 limited-con
     [connectivity]
     enabled=True
     url=https://ping.archlinux.org
+# 感觉网络问题？偶尔才通
+#TODO:Connection closed by 20.205.243.160 port 443
+#     fatal: Could not read from remote repository.
+#     Please make sure you have the correct access rights
+#     and the repository exists.
 
 # libwacom-surface 触屏驱动
 yay -S libwacom-surface
@@ -230,6 +235,5 @@ mailsync akhialomgir362856@gmail.com
 neomutt #TODO:开启时自动同步邮件、folder显示问题（isync
 
 nvim ~/.config/mutt/muttrc
-
 ```
 

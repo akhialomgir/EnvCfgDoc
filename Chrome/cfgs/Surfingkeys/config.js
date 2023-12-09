@@ -494,5 +494,5 @@ addSearchAlias('st', 'steam', 'https://store.steampowered.com/search/?term=', 's
 addSearchAlias('wiki', 'wikipedia', 'https://en.wikipedia.org/wiki/Special:Search/', 's');
 addSearchAlias('y', 'yt', 'https://invidious.snopyta.org/search?q=', 's');
 
-// ---- Keymaps -----
-unmap('<Ctrl-\'>');
+// Except
+api.unmapAllExcept(['E','R','T','f'], /gmail.com|twitter.com|leetcode.cn/);

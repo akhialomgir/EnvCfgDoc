@@ -149,7 +149,6 @@ sudo vim /etc/NetworkManager/conf.d/20-20-connectivity.conf # 解决 limited-con
     [connectivity]
     enabled=True
     url=https://ping.archlinux.org
-#NOTE: 需要打开**IP转发**，否则git ssh会无法使用
 
 # libwacom-surface 触屏驱动
 yay -S libwacom-surface

@@ -7,6 +7,7 @@ sudo pacman -S git
 git config --global user.name akhialomgir
 git config --global user.email akhialomgir362856@gmail.com
 git config --global core.editor nvim
+git config --global credential.helper libsecret # https credential helper
 ssh-keygen
 # copy to Github
 cat ~/.ssh/id_rsa.pub # or
@@ -21,7 +22,7 @@ vim ~/.ssh/config
         Hostname ssh.github.com
         Port 443
         User git
-ssh -v git@github.com
+ssh -v git@github.com #TODO: not working well with v2raya
 ```
 
 ## ZSH setup

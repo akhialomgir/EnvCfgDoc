@@ -496,4 +496,4 @@ addSearchAlias('y', 'yt', 'https://invidious.snopyta.org/search?q=', 's');
 
 // Except
 api.unmapAllExcept(['E','R','T'], /gmail.com|twitter.com/);
-api.unmapAllExcept(['E','R','T','f'], /leetcode.cn/);
+api.unmapAllExcept(['E','R','T','f','x'], /leetcode.cn/);

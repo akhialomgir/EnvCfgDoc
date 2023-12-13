@@ -11,7 +11,7 @@ precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '%b'
 # Set up the prompt (with git branch name)
 setopt PROMPT_SUBST
-PROMPT='%{$fg[yellow]%}%n%{$reset_color%}: %{$fg[blue]%}%1~ %F{yellow}${vcs_info_msg_0_} %{$reset_color%}%# '
+PROMPT='%n: %1~ ${vcs_info_msg_0_} %# '
 
 # ZSH Plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -153,12 +153,13 @@ sudo vim /etc/NetworkManager/conf.d/20-20-connectivity.conf # 解决 limited-con
 # libwacom-surface 触屏驱动
 yay -S libwacom-surface
 
-# grub 加入 windows 分区 美化
+# grub 美化
 # 从 store.kde.org/p/1009236 下载主题（如果字小就2k）
 cd ~/Downloads
 tar -xvf Vimix-2k.tar.xz
 sudo sh install.sh
-sudo mount /dev/nvem0n1p5 /boot # 可能不需要挂载？（待验证
+# grub menu 加入 windows 分区
+sudo mount /dev/nvme0n1p5 /boot # 必须 否则不写入 boot 分区，不生效
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # 高分屏屏幕比例问题
@@ -231,4 +232,9 @@ neomutt #TODO:开启时自动同步邮件、folder显示问题（isync
 
 nvim ~/.config/mutt/muttrc
 ```
+## Troubleshooting
 
+1. 更新后内核启动原版本导致驱动丢失，同时更新grub中不显示win
+  更新内核后需要立刻更新 grub
+2. sddm 启动后会自动打开 dolphin
+  setting -> Startup and Shutdown -> Start with an empty session <!--TODO:之前无问题，怀疑是 dolphin 无法正常关闭，待更优雅地解决-->

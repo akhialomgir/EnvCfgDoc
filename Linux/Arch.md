@@ -37,7 +37,7 @@ lsblk
 pacman -Syy
 pacstrap /mnt base base-devel linux linux-firmware nano vim e2fsprogs ntfs-3g
 genfstab -U -p /mnt >> /mnt/etc/fstab
-cat /mnt/etc/fstab
+cat /mnt/etc/fstab # 要确认文件系统正常挂载！
 
 arch-chroot /mnt
 
@@ -102,7 +102,6 @@ sudo vim /etc/pacman.conf
     Server = https://pkg.surfacelinux.com/arch/
 sudo pacman -Syu
 sudo pacman -S linux-surface linux-surface-headers iptsd linux-firmware-marvell # current 可能需要安装命令行代理才能跑 居然Syy就解决了... 也没有完全解决iptsd 还是要看运气
-sudo mount /dev/nvme0n1p5 /boot
 sudo grub-mkconfig -o /boot/grub/grub.cfg # 注意输出内容中是否使用surface kernel
 
 sudo systemctl enable NetworkManager # 更换内核需要重新 enable
@@ -158,8 +157,7 @@ yay -S libwacom-surface
 cd ~/Downloads
 tar -xvf Vimix-2k.tar.xz
 sudo sh install.sh
-# grub menu 加入 windows 分区
-sudo mount /dev/nvme0n1p5 /boot # 必须 否则不写入 boot 分区，不生效
+# grub menu 加入 windows 分区  INFO: 可能不需要，如果下次安装时前面grub中包含win则不需要
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # 高分屏屏幕比例问题
@@ -186,55 +184,27 @@ sudo vim /usr/lib/sddm/sddm.conf.d/default.conf
 
 # 同步 windows 和 arch 的蓝牙
 # https://wiki.archlinuxcn.org/wiki/%E8%93%9D%E7%89%99#%E5%8F%8C%E7%B3%BB%E7%BB%9F%E9%85%8D%E5%AF%B9
-
-# qq
-yay -S linuxqq
-
-# 截图
-sudo pacman -S spectacle
-```
-
-## pip
-
-```sh
-sudo pacman -S python3
-# 库内包直接使用 pacman 安装
-sudo pacman -S python-xxx
-# 库外包建立虚拟环境后安装
-python -m venv ./venv
-source .venv/bin/activate
-# 安装镜像避免代理导致的 SSL 问题
-pip install --upgrade pip # 如果不行先关代理
-pip install -i https://mirrors.ustc.edu.cn/pypi/web/simple pip -U
-pip config set global.index-url https://mirrors.ustc.edu.cn/pypi/web/simple
-```
-
-## VLC
-
-```sh
-sudo pacman -S vlc # 不要下开发分支
-```
-
-## NeoMutt
-
-```sh
-sudo pacman -S neomutt msmtp pass notmuch urlview lynx cronie
-yay -S abook pam-gnupg
-mkdir -p ~/Downloads/gitthings/
-git clone https://github.com/LukeSmithxyz/mutt-wizard ~/Downloads/gitthings/mutt-wizard/
-cd ~/Downloads/gitthings/mutt-wizard/
-sudo make install
-gpg --full-generate-key
-pass init akhialomgir362856@gmail.com
-mw -a akhialomgir362856@gmail.com # google app specific password
-mailsync akhialomgir362856@gmail.com
-neomutt #TODO:开启时自动同步邮件、folder显示问题（isync
-
-nvim ~/.config/mutt/muttrc
 ```
 ## Troubleshooting
 
-1. 更新后内核启动原版本导致驱动丢失，同时更新grub中不显示win
-  更新内核后需要立刻更新 grub
-2. sddm 启动后会自动打开 dolphin
-  setting -> Startup and Shutdown -> Start with an empty session <!--TODO:之前无问题，怀疑是 dolphin 无法正常关闭，待更优雅地解决-->
+### 更新后内核启动原版本导致驱动丢失，同时更新grub中不显示win
+
+更新内核后需要立刻更新 grub
+```sh
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+### sddm 启动后会自动打开 dolphin
+
+setting -> Startup and Shutdown -> Start with an empty session <!-- TODO:之前无问题，怀疑是 dolphin 无法正常关闭，待更优雅地解决-->
+
+### 无法连接ios wifi 热点
+
+首先更新驱动，无效则尝试使用 nmcli 连接
+
+```sh
+nmcli dev wifi list
+nmcli dev wifi connect "iPhone"
+```
+
+<!-- TODO: secure boot 不使用会导致经典屏幕上有红锁，来点吹毛求疵-->

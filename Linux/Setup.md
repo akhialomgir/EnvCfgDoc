@@ -35,7 +35,8 @@ sudo pacman -S zsh zsh-autosuggestions zsh-syntax-highlighting -y
 
 cp ~/EnvCfgDoc/Linux/cfgs/.zshrc ~ && zsh # common Linux
 
-cat ~/EnvCfgDoc/Linux/cfgs/.zshrc ~/EnvCfgDoc/Linux/cfgs/.zshrc_clash_win > ~/.zshrc && zsh # WSL2
+cat ~/EnvCfgDoc/Linux/cfgs/.zshrc ~/EnvCfgDoc/Linux/cfgs/.zshrc_clash_win \
+  > ~/.zshrc && zsh # WSL2
 
 chsh -s $(which zsh)
 ```
@@ -47,7 +48,7 @@ chsh -s $(which zsh)
  cp ~/EnvCfgDoc/Linux/cfgs/.tmux.conf ~
 ```
 
-# VIM setup
+## VIM setup
 
 ```sh
 sudo pacman -S gvim
@@ -55,7 +56,7 @@ cp ~/EnvCfgDoc/Linux/cfgs/.vimrc ~
 vim
 ```
 
-# NeoVIM setup
+## NeoVIM setup
 
 ```sh
 sudo pacman -S neovim
@@ -65,19 +66,19 @@ nvim
 rm -rf ~/.local/share/nvim/lazy # if module 'lazy' not found
 ```
 
-# qq
+## qq
 
 ```sh
 yay -S linuxqq
 ```
 
-# spectacle
+## spectacle
 
 ```sh
 sudo pacman -S spectacle
 ```
 
-# pip
+## pip
 
 ```sh
 sudo pacman -S python3

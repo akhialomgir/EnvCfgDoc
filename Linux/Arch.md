@@ -50,10 +50,12 @@ visudo
 echo "AKHIA" > /etc/hostname
 
 echo "185.199.108.133 raw.githubusercontent.com" >> /etc/hosts # 可能会变
-curl -sSL https://raw.githubusercontent.com/maxiaof/github-hosts/master/hosts | tee -a /etc/hosts
+curl -sSL https://raw.githubusercontent.com/maxiaof/github-hosts/master/hosts \
+  | tee -a /etc/hosts
 
 pacman -S intel-ucode grub efibootmgr os-prober
-grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub --recheck # 未配置 windows 引导
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub --recheck
+# 未配置 windows 引导
 
 echo "GRUB_DISABLE_OS_PROBER=false" >> /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg # 一定要确定输入命令有输出
@@ -101,7 +103,8 @@ sudo vim /etc/pacman.conf
     [linux-surface]
     Server = https://pkg.surfacelinux.com/arch/
 sudo pacman -Syu
-sudo pacman -S linux-surface linux-surface-headers iptsd linux-firmware-marvell # current 可能需要安装命令行代理才能跑 居然Syy就解决了... 也没有完全解决iptsd 还是要看运气
+sudo pacman -S linux-surface linux-surface-headers iptsd linux-firmware-marvell
+# current 可能需要安装命令行代理才能跑 居然Syy就解决了... 也没有完全解决iptsd 还是要看运气
 sudo grub-mkconfig -o /boot/grub/grub.cfg # 注意输出内容中是否使用surface kernel
 
 sudo systemctl enable NetworkManager # 更换内核需要重新 enable
@@ -110,7 +113,10 @@ sudo systemctl enable NetworkManager # 更换内核需要重新 enable
 sudo pacman -S xorg plasma sddm konsole dolphin ark gwenview
 sudo systemctl enable sddm
 # 字体
-sudo pacman -S adobe-source-han-sans-cn-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-sarasa-gothic ttf-nerd-fonts-symbols ttf-twemoji ttf-sarasa-gothic # sarasa-gothic 解决中文问题
+sudo pacman -S adobe-source-han-sans-cn-fonts \
+  noto-fonts noto-fonts-cjk noto-fonts-emoji \
+  ttf-sarasa-gothic ttf-nerd-fonts-symbols ttf-twemoji ttf-sarasa-gothic
+# sarasa-gothic 解决中文问题
 # 字形调整
 mkdir -p ~/.config/fontconfig
 curl -o ~/.config/fontconfig/fonts.conf -sSL https://raw.githubusercontent.com/akhialomgir/EnvCfgDoc/main/Linux/cfgs/fonts.conf
@@ -144,7 +150,9 @@ yay -S v2raya
 sudo systemctl enable v2raya.service
 sudo systemctl start v2raya.service
 # 不需要配置 env，否则会出现ssl问题
-sudo vim /etc/NetworkManager/conf.d/20-20-connectivity.conf # 解决 limited-connectivity 问题
+
+# 解决 limited-connectivity 问题
+sudo vim /etc/NetworkManager/conf.d/20-20-connectivity.conf
     [connectivity]
     enabled=True
     url=https://ping.archlinux.org
@@ -184,19 +192,25 @@ sudo vim /usr/lib/sddm/sddm.conf.d/default.conf
 
 # 同步 windows 和 arch 的蓝牙
 # https://wiki.archlinuxcn.org/wiki/%E8%93%9D%E7%89%99#%E5%8F%8C%E7%B3%BB%E7%BB%9F%E9%85%8D%E5%AF%B9
+# INFO: EDIV 需要转换为十进制
+# MX Master idle 后卡顿 TODO: 无用
+# https://wiki.archlinux.org/title/Power_management#USB_autosuspend
+sudo vim /etc/udev/rules.d/50-usb_power_save.rules
+  ACTION=="add", SUBSYSTEM=="usb", TEST=="power/control", ATTR{power/control}="auto"
 ```
+
 ## Troubleshooting
 
 ### 更新后内核启动原版本导致驱动丢失，同时更新grub中不显示win
 
 更新内核后需要立刻更新 grub
+
 ```sh
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 ### sddm 启动后会自动打开 dolphin
 
-setting -> Startup and Shutdown -> Start with an empty session <!-- TODO:之前无问题，怀疑是 dolphin 无法正常关闭，待更优雅地解决-->
 
 ### 无法连接ios wifi 热点
 

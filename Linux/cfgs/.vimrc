@@ -10,8 +10,7 @@ set history=1000
 
 " display
 syntax on
-set number
-set relativenumber
+set number relativenumber
 set wrap
 set ruler
 set cursorline
@@ -20,6 +19,7 @@ set cursorline
 set hlsearch
 set incsearch
 set showmatch
+set ignorecase smartcase
 
 " indent
 set autoindent

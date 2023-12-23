@@ -211,7 +211,6 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 ### sddm 启动后会自动打开 dolphin
 
-
 ### 无法连接ios wifi 热点
 
 首先更新驱动，无效则尝试使用 nmcli 连接

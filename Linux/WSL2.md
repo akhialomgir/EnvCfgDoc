@@ -14,16 +14,16 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 
 [Install ArchWSL here](https://github.com/yuk7/ArchWSL/releases)
 
-1. Unzip it in the **root directory of the C drive** and run **Arch.exe**
+### 1. Unzip it in the **root directory of the C drive** and run **Arch.exe**
 
-2. enable **Proxy** between Win and WSL
+### 2. enable **Proxy** between Win and WSL
 
 ```PowerShell
 New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEthernet (WSL)"  -Action Allow
 New-NetFirewallRule -DisplayName "WSL2toHost" -Direction Inbound -InterfaceAlias "vEthernet (WSL)" -Action Allow -RemoteAddress LocalSubnet
 ```
 
-3. Switch to WSL2
+### 3. Switch to WSL2
 
 ```PowerShell
 wsl -l -v
@@ -31,7 +31,7 @@ wsl --set-version Arch 2
 wsl -l -v
 ```
 
-4. Update WSL
+### 4. Update WSL
 
 ```PowerShell
 wsl --update

@@ -12,6 +12,7 @@ git config --global credential.helper libsecret # https credential helper
 git config --global core.editor nvim
 git config --global merge.tool nvimdiff
 git config --global mergetool.nvimdiff trustExitCode true
+git config --global mergetool.keepBackup false
 
 git config --global pull.rebase false
 

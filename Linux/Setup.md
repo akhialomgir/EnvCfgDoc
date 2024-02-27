@@ -128,3 +128,9 @@ nvim ~/.config/mutt/muttrc
 ## Rsync
 
 <!--TODO: 待配置-->
+
+## Chrome
+
+```sh
+yay -S google-chrome
+alias chrome="google-chrome-stable"

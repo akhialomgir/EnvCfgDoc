@@ -37,3 +37,6 @@ setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
 # Keymaps
 bindkey \^U backward-kill-line # Bash
+
+# Alias
+alias chrome="google-chrome-stable"

@@ -25,7 +25,7 @@ const {
 } = api;
 
 // inline query
-api.Front.registerInlineQuery({
+Front.registerInlineQuery({
     url: "https://api.shanbay.com/bdc/search/?word=",
     parseResult: function(res) {
         try {

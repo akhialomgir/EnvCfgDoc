@@ -46,3 +46,9 @@ git config --global user.email “akhialomgir362856@gmail.com”
 ssh-keygen
 cat ~/.ssh/id_rsa.pub # 复制到 Github
 ```
+
+# 7-Zip
+
+`GUI`没有选编码功能，答案是手动改！
+
+[修改windows的默认编码](https://blog.csdn.net/lee_ham/article/details/82634411)

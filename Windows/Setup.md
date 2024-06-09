@@ -52,3 +52,11 @@ cat ~/.ssh/id_rsa.pub # 复制到 Github
 GUI 没有选编码功能，答案是手动改！
 
 [修改windows的默认编码](https://blog.csdn.net/lee_ham/article/details/82634411)
+
+# Blender
+
+Edit -> Preferences -> Input -> Tablet -> Tablet API 切换到 Windows Ink 再切换回来，能解决数位板压感问题。
+
+Edit -> Preferences -> Navigation -> Zoom -> Zoom to Mouse Position 定点缩放
+
+Edit -> Preferences -> Navigation -> Orbit -> Orbit Around Selection 围绕物体旋转

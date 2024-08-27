@@ -10,6 +10,8 @@ git config --global user.email akhialomgir362856@gmail.com
 git config --global credential.helper libsecret # https credential helper
 
 git config --global core.editor nvim
+# chinese path
+git config --global core.quotepath false
 git config --global merge.tool nvimdiff
 git config --global mergetool.nvimdiff trustExitCode true
 git config --global mergetool.keepBackup false

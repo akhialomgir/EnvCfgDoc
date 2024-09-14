@@ -40,3 +40,6 @@ bindkey \^U backward-kill-line # Bash
 
 # Alias
 alias chrome="google-chrome-stable"
+
+# LCTL(only)=Esc
+xcape -e 'Control_L=Escape'

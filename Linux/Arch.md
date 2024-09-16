@@ -136,6 +136,8 @@ reboot # 重启
 # 此时有图形界面
 
 # Ctrl <-> Caps
+sudo pacman -S scape
+xcape -e 'Control_L=Escape'
 sudo vim /usr/share/X11/xkb/keycodes/evdev
     <CAPS> = 66; => 37
     <LCTL> = 37; => 66

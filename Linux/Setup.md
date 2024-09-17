@@ -1,5 +1,15 @@
 # Setup
 
+## Clone configs
+
+```sh
+cd ~
+
+git clone git@github.com:akhialomgir/dotfiles.git
+
+rm -rf .git/
+```
+
 ## Git setup
 
 ```sh
@@ -43,11 +53,6 @@ ssh -v git@github.com #TODO: not working well with v2raya
 ```sh
 sudo pacman -S zsh zsh-autosuggestions zsh-syntax-highlighting -y
 
-cp ~/EnvCfgDoc/Linux/cfgs/.zshrc ~ && zsh # common Linux
-
-cat ~/EnvCfgDoc/Linux/cfgs/.zshrc ~/EnvCfgDoc/Linux/cfgs/.zshrc_clash_win \
-  > ~/.zshrc && zsh # WSL2
-
 chsh -s $(which zsh)
 ```
 
@@ -55,14 +60,12 @@ chsh -s $(which zsh)
 
 ```sh
  sudo pacman -S tmux xclip
- cp ~/EnvCfgDoc/Linux/cfgs/.tmux.conf ~
 ```
 
 ## VIM setup
 
 ```sh
 sudo pacman -S gvim
-cp ~/EnvCfgDoc/Linux/cfgs/.vimrc ~
 vim
 ```
 
@@ -70,7 +73,6 @@ vim
 
 ```sh
 sudo pacman -S neovim
-cp -r ~/EnvCfgDoc/Linux/cfgs/nvim ~/.config/
 sudo pacman -S ttf-firacode-nerd # set as default font in console profile
 nvim
 rm -rf ~/.local/share/nvim/lazy # if module 'lazy' not found

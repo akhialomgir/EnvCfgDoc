@@ -193,12 +193,8 @@ sudo vim /usr/lib/sddm/sddm.conf.d/default.conf
     ServerArguments=-nolisten -tcp -dpi 150
 
 # 同步 windows 和 arch 的蓝牙
+# EDIV 需要转换为十进制
 # https://wiki.archlinuxcn.org/wiki/%E8%93%9D%E7%89%99#%E5%8F%8C%E7%B3%BB%E7%BB%9F%E9%85%8D%E5%AF%B9
-# INFO: EDIV 需要转换为十进制
-# MX Master idle 后卡顿 TODO: 无用
-# https://wiki.archlinux.org/title/Power_management#USB_autosuspend
-sudo vim /etc/udev/rules.d/50-usb_power_save.rules
-  ACTION=="add", SUBSYSTEM=="usb", TEST=="power/control", ATTR{power/control}="auto"
 ```
 
 ## Troubleshooting
@@ -221,5 +217,3 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 nmcli dev wifi list
 nmcli dev wifi connect "iPhone"
 ```
-
-<!-- TODO: secure boot 不使用会导致经典屏幕上有红锁，来点吹毛求疵-->

@@ -189,8 +189,22 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 # 美化 sddm
 # 系统设置 -> 侧栏：开机和关机 -> 登录屏幕（SDDM）
 # sddm dpi
-sudo vim /usr/lib/sddm/sddm.conf.d/default.conf
-    ServerArguments=-nolisten -tcp -dpi 150
+#------------------------------------失效且不推荐
+#sudo vim /usr/lib/sddm/sddm.conf.d/default.conf
+#    ServerArguments=-nolisten -tcp -dpi 150
+#------------------------------------------------
+/etc/sddm.conf.d/hidpi.conf
+[Wayland]
+
+EnableHiDPI=true
+
+[X11]
+
+EnableHiDPI=true
+
+[General]
+
+GreeterEnvironment=QT_SCREEN_SCALE_FACTORS=2,QT_FONT_DPI=150
 
 # 同步 windows 和 arch 的蓝牙
 # EDIV 需要转换为十进制

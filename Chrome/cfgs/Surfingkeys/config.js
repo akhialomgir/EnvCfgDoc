@@ -453,8 +453,8 @@ removeSearchAlias('s', 's');
 
 addSearchAlias('ama', 'amazon', 'https://www.amazon.com/s?k=', 's');
 addSearchAlias('ap', 'arch pkg', 'https://www.archlinux.org/packages/?sort=&q=', 's');
-addSearchAlias('aur', 'aur', 'https://aur.archlinux.org/packages/?O=0&SeB=nd&K=', 's');
-addSearchAlias('aw', 'arch wiki', 'https://wiki.archlinux.org/index.php?title=Special:Search&search=', 's');
+//addSearchAlias('aur', 'aur', 'https://aur.archlinux.org/packages/?O=0&SeB=nd&K=', 's');
+//addSearchAlias('aw', 'arch wiki', 'https://wiki.archlinux.org/index.php?title=Special:Search&search=', 's');
 addSearchAlias('d',  'ddg', 'https://duckduckgo.com/?q=', 's');
 addSearchAlias('dh', 'docker', 'https://hub.docker.com/search?type=image&q=', 's');
 addSearchAlias('fh', 'flathub', 'https://flathub.org/apps/search/', 's');
@@ -468,3 +468,4 @@ addSearchAlias('y', 'yt', 'https://invidious.snopyta.org/search?q=', 's');
 // Except
 api.unmapAllExcept(['E','R','T'], /gmail.com|twitter.com/);
 api.unmapAllExcept([], /leetcode.cn/);
+api.unmapAllExcept([], /tetr.io/);
